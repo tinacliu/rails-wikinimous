@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="mx-auto my-3 70vw">
+      <% @articles.each do |article| %>
+        <h4><%= link_to article.title, article_path(article) %></h3>
+        <p class = "font-weight-light"><%= article.content %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

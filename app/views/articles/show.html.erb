@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="mx-auto my-3 70vw">
+
+      <div class="titlebar d-flex justify-content-between">
+        <h3 class="mb-0"><%= @article.title %></h3>
+        <h5 class="mb-0">
+          <%= link_to edit_article_path(@article) do %>
+            <i class="fas fa-pencil-alt m-2"></i>
+          <% end %>
+          <%= link_to article_path(@article), method: :delete,
+            data: { confirm: "Are you sure you want to delete?"} do %>
+              <i class="far fa-trash-alt m2"></i>
+          <% end %>
+        </h5>
+      </div>
+
+      <hr>
+      <p class = "font-weight-light"><%= @article.content %></p>
+      <%= image_tag("https://loremflickr.com/320/240") %>
+      <p class = "font-weight-light">...because who doesn't love cats</p>
+    </div>
+  </div>
+</div>

@@ -7,9 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" %>
+    <%= stylesheet_link_tag "https://use.fontawesome.com/releases/v5.8.2/css/all.css" %>
   </head>
 
   <body>
+    <div class="navbar bg-light border-bottom mb-4">
+      <%= link_to "Wikinimous", articles_path  %>
+      <%= link_to "New Article", new_article_path  %>
+    </div>
+
     <%= yield %>
   </body>
 </html>
